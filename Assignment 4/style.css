@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 80px;
+    display: flex;
+    background-color: olive;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+}
+
+#click{
+    display: none;
+}
+
+nav .menu-btn i{
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .logo{
+    font-size: 33px;
+    
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    margin: 0px 5px;
+}
+
+nav ul li a{
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: all 0.3 ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover{
+    background-color: white;
+    color: black;
+}
+
+@media screen and (max-width: 750px){
+    nav .menu-btn i{
+        font-size: 25px;
+        cursor: pointer;
+        display: block;
+    }
+    nav .logo{
+        font-size: 22px;
+        font-weight: 300;
+    }
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: black;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        transition: all 0.3 ease;
+        text-align: center;
+    }
+    
+    #click:checked~ul{
+        left: 0%;
+    }
+    #click:checked~.menu-btn i:before{
+        content: "\e9b8";
+    }
+    nav ul li {
+        margin: 40px 0;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: none;
+        color: cyan;
+    }
+    
+}
+
+@media screen and (max-width:890px) {
+    nav .logo {
+        font-size: 22px;
+        font-weight: 600;
+    }
+    nav .menu-btn i {
+        font-size: 18px;
+    }
+    nav ul li a {
+        font-size: 18px;
+    }
+    nav ul li {
+        margin: 30px 0;
+    }
+    nav ul li a {
+        letter-spacing: 1px;
+        padding: 6px 8px;
+        border-radius: 4px;
+    }
+}
+
+.carousel {
+    overflow: hidden;
+    width: 90vw;
+    margin: 2px auto;
+    box-shadow: 4px 4px 4px gray;
+  }
+  figure {
+    position: relative;
+    height: 70vh;
+    width: 500%;
+    animation: 20s carousel infinite;
+  }
+  .carousel figure img {
+    width: 20%;
+    height: 100%;
+    float: left;
+  }
+
+  @keyframes carousel {
+    0% {
+      left: 0%;
+    }
+    20% {
+      left: 0%;
+    }
+    25% {
+      left: -100%;
+    }
+    45% {
+      left: -100%;
+    }
+    50% {
+      left: -200%;
+    }
+    70% {
+      left: -200%;
+    }
+    75% {
+      left: -300%;
+    }
+    95% {
+      left: -300%;
+    }
+    100% {
+      left: -400%;
+    }
+  }
+.cards{
+    height: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.card{
+    height: 400px;
+    width: 300px;
+    margin: 60px;
+    border-radius: 10px;
+    box-shadow: 4px 5px 5px #e5e5e5;
+    position: relative;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.card img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 6rem;
+    font-family:monospace;
+    font-weight: bold;
+    font-size: 60px;
+    color: olive;
+}
+
+p{
+    
+    top:90%;
+    left:40%;
+    text-align: center;
+    color: black;
+    
+    font-size: 110%;
+    
+}
+.button1{
+    padding:6px;
+    margin-left: 35%;
+    border-radius: 4px;
+    color:white;
+    background-color: olive;
+
+
+}
+
+.card:hover{
+    transform: scale(110%);
+}
+
+.contact{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+input{
+    margin: 20px auto;
+    padding: 10px;
+    
+}
+
+.review{
+    height: 100px;
+    width: 370px;
+}
+
+@media screen and (max-width:1260px){
+    .contact{
+        margin-top: 600px;
+    }
+    
+}
+
+@media screen and (max-width:840px){
+    .contact{
+        margin-top: 2200px;
+    }
+}
+
+.button{
+    
+    cursor: pointer;
+    color: white;
+    height: 50px;
+    width: 125px;
+    
+    background-color: olive;
+    color: white;
+    border-radius: 2px;
+    
+    
+    font-size: large;
+    border-radius: 4px;
+}
+
+.button:hover{
+    
+    border: 2px solid burlywood;
+    color: white;
+    transform: translate(0px, -2px);
+    border-radius: 2px;
+}
+
+.footer{
+    text-align: center;
+    background-color:black;
+    color:white;
+    height: 100px;
+    padding: 20px;
+}
+
+.footer a{
+    font-size: 30px;
+}
+
+@media screen and (max-width: 443px) {
+    input{
+        margin-left: 100px;
+        padding: 5px;
+        
+    }
+    .review{
+        width: 50%;
+        margin-right: 100px;
+    }
+    .button{
+        margin-right: 80px;
+    }
+}
